@@ -8,14 +8,43 @@
   float: left;
 }
 
+.corner {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index: -1;
+}
+.nw {
+    background: red;
+    left: 0;
+    top: 0;
+}
+.ne {
+    background: green;
+    right: 0;
+    top: 0;
+}
+.sw {
+    background: blue;
+    left: 0;
+    bottom: 0;
+}
+.se {
+    background: black;
+    right: 0;
+    bottom: 0;
+}
+
+a {text-decoration: none;} /* 去掉a的默认下划线*/
 
 body 
 {
- margin-top:6px;
- margin-bottom: 100px;
- margin-left:8px;
- margin-right:8px;
-
+	position: relative;
+/*  margin: 1%;*/
+	margin-top:33px;
+	margin-bottom:33px;
+	margin-left:66px;
+	margin-right:66px;
 
 }
 
@@ -31,4 +60,15 @@ p  {
 	font-variant: normal;
 	text-transform: none;
   	/*font-size: 160%;*/
+}
+
+hr { 
+  color: black;
+  display: block;
+  margin-top: -1em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
 }
