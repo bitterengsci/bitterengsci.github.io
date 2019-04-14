@@ -2,10 +2,18 @@
 <html>
     
     <head>
+        <title>Carrie (Ran) Yan</title>
         <link rel="stylesheet" href="style.css">
         <script src="expand_shrink.js"></script>
         <meta charset="UTF-8">
-<!--    <title>WenliangGao</title>
+        <script src="jquery.js"></script>
+
+        <script>
+            $(function(){
+                $("#includedContent").load("eng_design.html");
+            });
+        </script>
+<!--    
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -35,12 +43,13 @@
 
         <h2>TECHNICAL SKILLS</h2>
         <hr />
-        <ul>
-        <li><strong>Relevant Courses</strong>: (Taken/Audited) Computer Vision, Deep Learning, Machine Learning for Imaging, Scientific Computing (Numerical Methods), Robotics, Graphics, Computational Optimization, Probabilistic Inference</li>
-        <li><strong>Programming</strong>: (proficient) Python, C/C++, Java, MatLab/Simulink &nbsp;(basic) Verilog, Assembly, LabView, Fortran, R, Octave</li>
-        <li><strong>Platforms/Libraries</strong>: (proficient) ROS, OpenCV, Keras, PyTorch (basic) Azure, TensorFlow, Caffe, OpenGL, CUDA</li>
-        <li><strong>Skills</strong>: Microsoft Office Suite, LaTex, SharePoint</li>
-        <li><strong>Modeling</strong>: AutoCAD, SolidWorks, SketchUp, OpenSCAD, Ansys, Autodesk Eagle, Photoshop</li>
+
+        <ul style='font-size: 20px'>
+            <li><strong>Relevant Courses</strong>: (Taken/Audited) Computer Vision, Deep Learning, Machine Learning for Imaging, Scientific Computing (Numerical Methods), Robotics, Graphics, Computational Optimization, Probabilistic Inference</li>
+            <li><strong>Programming</strong>: (proficient) Python, C/C++, Java, MatLab/Simulink &nbsp;(basic) Verilog, Assembly, LabView, Fortran, R, Octave</li>
+            <li><strong>Platforms/Libraries</strong>: (proficient) ROS, OpenCV, Keras, PyTorch (basic) Azure, TensorFlow, Caffe, OpenGL, CUDA</li>
+            <li><strong>Skills</strong>: Microsoft Office Suite, LaTex, SharePoint</li>
+            <li><strong>Modeling</strong>: AutoCAD, SolidWorks, SketchUp, OpenSCAD, Ansys, Autodesk Eagle, Photoshop</li>
         </ul>
 
 
@@ -67,9 +76,9 @@
         <p style='text-align: left'><strong>🇨🇦 Research Assistant &mdash; Autonomous Systems Laboratory </strong>(Prof. Goldie Nejat) U of T MIE Department <em>Canada </em>  
                 <span style="float:right;">2017</span></p>
         <ul style="margin-top:-0.66em, margin-bottom: 0.33em">
-        <li>Modelled new parts with SolidWorks and 3-D printing to fix the broken parts and imperfections on Casper</li>
         <li>Developed a movement and collision simulator via ROS for kinematics of a 3-D printing customized robot Casper (with packages tf, urdf, sw_urdf_exporter, Gazebo, Rviz and MoveIt)</li>
         <li>Researched the accuracy of machine learning algorithms (Bayesian, RF, SVM, K-nearest) on Capser to perform socially assistive actions by sequence (tea serving task as an example)</li>
+        <li>Modelled new parts with SolidWorks and 3-D printing to fix the broken parts and imperfections on Casper</li>
         </ul>
          
         <p><strong>🇩🇪 Research Assistant &mdash; Production Engineering and Forming Machines </strong>(Prof. Peter Groche) <em>Germany</em>    &nbsp;<a href="Slides/2016Darmstadt.pptx">📂</a>
@@ -103,6 +112,36 @@
         <li>Nominated by Prof. Timothy D Barfoot</li>
         <li>Assembled a robot using Lego Mindstorms EV3 and programmed in EV3RT and adaptively controlled the robot to stabilize itself and attack the enemy</li>
         </ul>
+
+        <p style="font-size: 12pt"> <em> Note that most of the engineering designs (in Collapsible) are group work and some of them are requirements in the curriculum of degree. </em> </p>
+
+        <button class="collapsible">More Engineering Designs</button>
+        <div class="content">
+            <!-- <link rel="import" href="eng_design.html" > -->
+            <!-- <div id = "includedContent"></div> -->
+            <!-- <div data-include="eng_design.html"></div> -->
+            
+            hahahah
+        </div>
+
+        <script src="js/collapsible.js"></script>
+        <!-- <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script> -->
+        
 
         <h2><strong>EXTRACURRICULAR ACTIVITIES</strong></h2>
         <hr />
@@ -145,7 +184,7 @@
 
         <p>Prof. G.M.T. D'Eleuterio (thesis supervisor, Bachelor)</p>
             <p style="padding-left: 30px;">Professor of Space Robotics Lab, UTIAS (University of Toronto Institute for Aerospace Studies)</p>
-            <p style="padding-left: 30px;">gabriele.deleuterio@<a href="http://utoronto.ca">utoronto.ca</a></p>
+            <p style="padding-left: 30px;"><a href="mailto:gabriele.deleuterio@utoronto.ca">gabriele.deleuterio@utoronto.ca</a></p>
         <p>&nbsp;</p>
 
         <p>Prof. Hugh HT Liu (summer research supervisor, Bachelor)</p>
@@ -158,20 +197,63 @@
         <h3><strong>COURSE TAKEN/AUDITED</strong></h3>
         <hr />
             <ul style="margin-top:-0.66em, margin-bottom: 0.33em">
-            <li><a href="http://www.dynsyslab.org/wp-content/uploads/2015/05/aer372_2015_syllabus.pdf">Control Theory (AER372)</a>
+            <h4> Master Level </h4>
             <li><a href="https://www.imperial.ac.uk/computing/current-students/courses/316/">Computer Vision (CO316)</a>
-            <li><a href="https://www.doc.ic.ac.uk/~ajd/Robotics/">Robotics</a>
+                    &nbsp;<a href="Notes/ ">✏️</a>
+            <li><a href="https://www.doc.ic.ac.uk/~ajd/Robotics/">Robotics (CO333)</a>
+                    &nbsp;<a href="Notes/ ">✏️</a> &nbsp;<a href="Notes/ ">📝</a>
             <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/460/">Deep Learning (CO460)</a>
+                    &nbsp;<a href="Notes/ ">✏️</a>
             <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/416/">Machine Learning for Imaging (CO416)</a>
-            <li><a href=" ">Scientific Computing (Numerical Methods) (AER336)</a>
+                    &nbsp;<a href="Notes/ ">✏️</a>
             <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/317/">Graphics (CO317)</a>
             <li><a href="https://www.imperial.ac.uk/computing/current-students/courses/477/">Computational Optimization (CO477)</a>
+                    &nbsp;<a href="Notes/ ">✏️</a>
             <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/493/">Probabilistic Inference (CO493)</a>
             <li><a href="https://www.imperial.ac.uk/computing/current-students/courses/343/">Operations Research (CO343)</a>
+                    &nbsp;<a href="Notes/ ">✏️</a>
             <li><a href="https://wp.doc.ic.ac.uk/sleutene/teaching/co433-advanced-robotics/">Advanced Robotics (CO433)</a>
+                    &nbsp;<a href="Notes/ ">✏️</a>
 
-        <!-- <a href=" ">    </a> -->
+            
+            <h4> Bachelor Level </h4>
+            <li><a href=" ">Scientific Computing (Numerical Methods) (AER336)</a> 
+                    &nbsp;<a href="Notes/ ">✏️</a>
+            <li><a href="http://www.dynsyslab.org/wp-content/uploads/2015/05/aer372_2015_syllabus.pdf">Control Theory (AER372)</a> 
+                    &nbsp;<a href="Notes/ ">✏️</a> &nbsp;<a href="Notes/ ">📝</a>
+            <li>Python
+            <li>Java    
+            <li>Calculus (MAT194 & MAT195 & AER210) 
+            <li>Complex Analysis
+            <li>Probability & Statistics
+            <li>Differential Equation
+            <li>Linear Algebra 
+            <li>Aerodynamics
+            <li>Gasdynamics
+            <li>Classical Mechanics
+            <li>Circuit for Mechatronics   
+            <li>Aircraft Design
+            <li>Combustion
+            <li>Solid Mechanics & Structure
+            <li>Solid Mechanics (Advanced)
+            <li>Logic Circuits
+            <li>Computer Organization and Embedded Systems
+            <li>Data Structure and Analysis
+            <li>Robotics (Modelling, Control, Manipulation)
+            <li>Mobile Robotics and Perception (Modelling, Perception, Navigation, Planning)
+            <li>Classic Physics
+            <li>Engineering Economics & Decision Making
+            <li>Electrical Field & Magnetic Field
+            <li>Wave & Vibration
+            <li>Relativity & Quantum Mechanics
+            <li>Thermal Physics
+            <li>Hydrostatics & Fluid Dynamics
+            <li>Accounting (basic)
+            <li>Finance (basic)
+
+        <!-- <li><a href=" ">    </a> -->
         </ul>
+        <p style="font-size: 12pt"> <em> Click ✏️ to fetch my notes or 📝 for past final solutions (created by me). </em> </p>
 
     </body>
 </html>
