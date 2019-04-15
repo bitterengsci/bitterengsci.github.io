@@ -3,17 +3,49 @@
     <head>
         <title>Carrie (Ran) Yan</title>
         <link rel="stylesheet" href="style.css">
+
         <script src="js/expand_shrink.js"></script>
         <script src="js/collapsible.js"></script>
 
         <meta charset="UTF-8">
-        <script src="jquery.js"></script>
 
-        <!-- <script>
-            $(function(){
-                $("#includedContent").load("eng_design.html");
-            });
-        </script> -->
+        <script src="jquery.js"></script> 
+	    <script> 
+	    $(function(){
+	      $("#includedBachelor").load("bachelor.html"); 
+	    });
+	    </script>
+
+	    <script>
+		function includeHTML() {
+		  var z, i, elmnt, file, xhttp;
+		  /* Loop through a collection of all HTML elements: */
+		  z = document.getElementsByTagName("*");
+		  for (i = 0; i < z.length; i++) {
+		    elmnt = z[i];
+		    /*search for elements with a certain atrribute:*/
+		    file = elmnt.getAttribute("w3-include-html");
+		    if (file) {
+		      /* Make an HTTP request using the attribute value as the file name: */
+		      xhttp = new XMLHttpRequest();
+		      xhttp.onreadystatechange = function() {
+		        if (this.readyState == 4) {
+		          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+		          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+		          /* Remove the attribute, and call this function once more: */
+		          elmnt.removeAttribute("w3-include-html");
+		          includeHTML();
+		        }
+		      } 
+		      xhttp.open("GET", file, true);
+		      xhttp.send();
+		      /* Exit the function: */
+		      return;
+		    }
+		  }
+		}
+		</script>
+
 <!--    
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="" />
@@ -228,85 +260,86 @@
             <button class="collapsible">Master Level</button>
             <div class="content">
                 <ul style="margin-top:-0.66em, margin-bottom: 0.33em">
-                <li><a href="https://www.imperial.ac.uk/computing/current-students/courses/316/">Computer Vision (CO316)</a>
+                <li><a href="https://www.imperial.ac.uk/computing/current-students/courses/316/">Computer Vision</a>
                         &nbsp;<a href="Notes/CO316.pdf">✏️</a>
-                <li><a href="https://www.doc.ic.ac.uk/~ajd/Robotics/">Robotics (CO333)</a>
+                <li><a href="https://www.doc.ic.ac.uk/~ajd/Robotics/">Robotics</a>
                         &nbsp;<a href="Notes/CO333.pdf">✏️</a> &nbsp;<a href="Notes/ ">📝</a>
-                <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/460/">Deep Learning (CO460)</a>
+                <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/460/">Deep Learning</a>
                         &nbsp;<a href="Notes/CO460.pdf">✏️</a>
-                <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/416/">Machine Learning for Imaging (CO416)</a>
+                <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/416/">Machine Learning for Imaging</a>
                         &nbsp;<a href="Notes/CO416.pdf">✏️</a>
-                <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/317/">Graphics (CO317)</a>
-                <li><a href="https://www.imperial.ac.uk/computing/current-students/courses/477/">Computational Optimization (CO477)</a>
+                <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/317/">Graphics</a>
+                <li><a href="https://www.imperial.ac.uk/computing/current-students/courses/477/">Computational Optimization</a>
                         &nbsp;<a href="Notes/CO477.pdf">✏️</a>
-                <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/493/">Probabilistic Inference (CO493)</a>
-                <li><a href="https://www.imperial.ac.uk/computing/current-students/courses/343/">Operations Research (CO343)</a>
+                <li><a href="http://www.imperial.ac.uk/computing/current-students/courses/493/">Probabilistic Inference</a>
+                <li><a href="https://www.imperial.ac.uk/computing/current-students/courses/343/">Operations Research</a>
                         &nbsp;<a href="Notes/CO343.pdf">✏️</a>
-                <li><a href="https://wp.doc.ic.ac.uk/sleutene/teaching/co433-advanced-robotics/">Advanced Robotics (CO433)</a>
+                <li><a href="https://wp.doc.ic.ac.uk/sleutene/teaching/co433-advanced-robotics/">Advanced Robotics</a>
                         &nbsp;<a href="Notes/CO433.pdf">✏️</a>
                 </ul>
             </div>
             
             <button class="collapsible">Bachelor Level</button>
             <div class="content">
-                <ul style="margin-top:-0.66em, margin-bottom: 0.33em">
-                <li><a href=" ">Scientific Computing (Numerical Methods) (AER336)</a> &nbsp;<a href="Notes/AER336.pdf">✏️</a></li>
-                <li><a href="http://www.dynsyslab.org/wp-content/uploads/2015/05/aer372_2015_syllabus.pdf">Control Theory (AER372)</a> &nbsp;<a href="Notes/AER372.pdf">✏️</a> &nbsp;<a href="Notes/">📝</a></li>
-                
-                <h3> Math & Statistics </h3>
-                <li>Calculus (Univariate &amp; Multivariate &amp; Vector Calc)&nbsp;<a href="Notes/Calculus.pdf">✏️</a></li>
-                <li>Linear Algebra&nbsp;<a href="Notes/Linear Algebra.pdf">✏️</a></li>
-                <li>Probability &amp; Statistics&nbsp;<a href="Notes/Probability & Statistics.pdf">✏️</a></li>
-                <li>Ordinary Differential Equation&nbsp;<a href="Notes/ODE.pdf">✏️</a></li>
-                <li>Partial Differential Equation&nbsp;<a href="Notes/PDE.pdf">✏️</a></li>
-                <li>Complex Analysis&nbsp;<a href="Notes/MAT389.pdf">✏️</a></li>
+            	<ul style="margin-top:-0.66em, margin-bottom: 0.33em">
 
-                <h3> Programming & Computer Science </h3>
-                <li>Python&nbsp;<a href="Notes/Python.pdf">✏️</a></li>
-                <li>Java&nbsp;<a href="Notes/Java.pdf">✏️</a></li>
-                <li>Data Structure and Analysis&nbsp;<a href="Notes/CSC263.pdf">✏️</a></li>
-                <li>Theory of Computation (Discrete Math)&nbsp;<a href="Notes/CSC240.pdf">✏️</a></li>
+				<h3> Math & Statistics </h3>
+				<li>Calculus (<a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#MAT194H1">Univariate</a> &amp; <a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#MAT195H1">Multivariate</a> &amp; <a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#AER210H1">Vector Calc</a>)&nbsp;<a href="Notes/Calculus.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#MAT185H1">Linear Algebra</a> &nbsp;<a href="Notes/Linear Algebra.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#ECE286H1">Probability &amp; Statistics </a> &nbsp;<a href="Notes/Probability & Statistics.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#MAT292H1">Ordinary Differential Equation&nbsp;<a href="Notes/ODE.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#ESC384H1">Partial Differential Equation&nbsp;<a href="Notes/PDE.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#MAT389H1">Complex Analysis&nbsp;<a href="Notes/MAT389.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#AER336H1">Scientific Computing (Numerical Methods)</a> &nbsp;<a href="Notes/AER336.pdf">✏️</a></li>
 
-                <h3> Aerospace </h3>
-                <li>Hydrostatics &amp; Fluid Dynamics&nbsp;<a href="Notes/AER210.pdf">✏️</a></li>
-                <li>Aerodynamics&nbsp;<a href="Notes/AER307.pdf">✏️</a></li>
-                <li>Gasdynamics&nbsp;<a href="Notes/AER310.pdf">✏️</a></li>
-                <li>Combustion&nbsp;<a href="Notes/AER315.pdf">✏️</a></li>
-                <li>Aircraft Design&nbsp;<a href="Notes/AER302.pdf">✏️</a></li>
+				<h3> Programming & Computer Science </h3>
+				<li>Python&nbsp;<a href="Notes/Python.pdf">✏️</a></li>
+				<li>Java&nbsp;<a href="Notes/Java.pdf">✏️</a></li>
+				<li>Data Structure and Analysis&nbsp;<a href="Notes/CSC263.pdf">✏️</a></li>
+				<li>Theory of Computation (Discrete Math)&nbsp;<a href="Notes/CSC240.pdf">✏️</a></li>
 
-                <h3> Robotics & Mechanics </h3>
-                <li>Classic Physics&nbsp;<a href="Notes/PHY180.pdf">✏️</a></li>
-                <li>Classical Mechanics&nbsp;<a href="Notes/AER301.pdf">✏️</a></li>
-                <li>Robotics (Modelling, Control, Manipulation)&nbsp;<a href="Notes/AER525.pdf">✏️</a></li>
-                <li>Mobile Robotics and Perception (Modelling, Perception, Navigation, Planning)&nbsp;</li>
+				<h3> Aerospace & Structure </h3>
+				<li>Hydrostatics &amp; Fluid Dynamics&nbsp;</a><a href="Notes/AER210.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#AER307H1">Aerodynamics</a>&nbsp;<a href="Notes/AER307.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#AER310H1">Gasdynamics</a>&nbsp;<a href="Notes/AER310.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#AER315H1">Combustion Processes</a>&nbsp;<a href="Notes/AER315.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#AER302H1">Aircraft Design</a>&nbsp;<a href="Notes/AER302.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#AER373H1">Solid Mechanics &amp; Structure</a>&nbsp;<a href="Notes/AER373.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#AER5011">Computational Structural Mechanics and Design Optimization</a>&nbsp;<a href="Notes/AER501.pdf">✏️</a></li>
 
-                <h3> Electrical, Electronics & Mechatronics </h3>
-                <li>Linear Circuits&nbsp;<a href="Notes/ECE159.pdf">✏️</a></li>
-                <li>Logic Circuits&nbsp;<a href="Notes/ECE253a.pdf">✏️</a></li>
-                <li>Electrical Field &amp; Magnetic Field&nbsp;<a href="Notes/ECE259.pdf">✏️</a></li>
-                <li>Circuit for Mechatronics&nbsp;<a href="Notes/MIE346">✏️</a></li>
-                <li>Computer Organization and Embedded Systems&nbsp;<a href="Notes/ECE253b.pdf">✏️</a></li>
-                
-                <li>Solid Mechanics &amp; Structure&nbsp;<a href="Notes/AER373.pdf">✏️</a></li>
-                <li>Solid Mechanics (Advanced)&nbsp;<a href="Notes/AER501.pdf">✏️</a></li>
-                
-                <h3> Arts & Business </h3>
-                <li>Engineering Economics &amp; Decision Making&nbsp;<a href="Notes/CHE374.pdf">✏️</a></li>
-                <li>Accounting (basic)&nbsp;<a href="Notes/JRE300a.pdf">✏️</a></li>
-                <li>Finance (basic)&nbsp;<a href="Notes/JRE300b.pdf">✏️</a></li>
+				<h3> Robotics & Mechanics & Control </h3>
+				<li>Classic Physics</a>&nbsp;<a href="Notes/PHY180.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#AER301H1">Classical Mechanics (Dynamics)</a>&nbsp;<a href="Notes/AER301.pdf">✏️</a></li>
+				<li><a href="http://www.dynsyslab.org/wp-content/uploads/2015/05/aer372_2015_syllabus.pdf">Control Theory</a> &nbsp;<a href="Notes/AER372.pdf">✏️</a> &nbsp;<a href="Notes/">📝</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#AER525H1">Robotics (Modelling, Control, Manipulation)</a>&nbsp;<a href="Notes/AER525.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#AER521H1">Mobile Robotics and Perception (Modelling, Perception, Navigation, Planning)</a>&nbsp;</li>
 
-                <h3> Black Magics </h3>
-                <li>Wave &amp; Vibration&nbsp;<a href="Notes/PHY293a.pdf">✏️</a></li>
-                <li>Relativity &amp; Quantum Mechanics&nbsp;<a href="Notes/PHY293b.pdf">✏️</a></li>
-                <li>Thermal Physics&nbsp;<a href="Notes/PHY294.pdf">✏️</a></li>
-                
-                </ul>
-              
+				<h3> Electrical, Electronics & Mechatronics </h3>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#ECE159H1">Linear Circuits</a>&nbsp;<a href="Notes/ECE159.pdf">✏️</a></li>
+				<li><a>Logic Circuits</a>&nbsp;<a href="Notes/ECE253a.pdf">✏️</a></li>
+				<li><a>Computer Organization and Embedded Systems</a>&nbsp;<a href="Notes/ECE253b.pdf">✏️</a></li>
+				<li><a>Electrical Field &amp; Magnetic Field</a>&nbsp;<a href="Notes/ECE259.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#MIE346H1">Analog and Digital Electronics for Mechatronics</a>&nbsp;<a href="Notes/MIE346">✏️</a></li>
+
+				<h3> Arts & Business </h3>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#CHE374H1">Engineering Economics &amp; Decision Making</a>&nbsp;<a href="Notes/CHE374.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#JRE300H1">Accounting (basic)</a>&nbsp;<a href="Notes/JRE300a.pdf">✏️</a></li>
+				<li><a href="https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html#JRE300H1">Finance (basic)</a>&nbsp;<a href="Notes/JRE300b.pdf">✏️</a></li>
+
+				<h3> Black Magics </h3>
+				<li><a>Wave &amp; Vibration</a>&nbsp;<a href="Notes/PHY293a.pdf">✏️</a></li>
+				<li><a>Relativity &amp; Quantum Mechanics</a>&nbsp;<a href="Notes/PHY293b.pdf">✏️</a></li>
+				<li><a>Thermal Physics</a>&nbsp;<a href="Notes/PHY294.pdf">✏️</a></li>
+
+				</ul>
             </div>
             <script src="js/collapsible.js"></script>
-        <!-- <li><a href=" ">    </a>
-        
-        <p style="font-size: 12pt"> <em> Click ✏️ to fetch my notes or 📝 for past final solutions (created by me). </em> </p>
+
+        <!-- <li><a href=" ">    </a> -->
+
+        <p style="font-size: 12pt"> <em> Click the course name for detailed description/syllabus.  Click ✏️ to fetch my notes or 📝 for past final solutions (created by me). </em> </p>
+
+        <script>includeHTML(); </script>
 
     </body>
 </html>
