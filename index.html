@@ -3,49 +3,11 @@
     <head>
         <title>Carrie (Ran) Yan</title>
         <link rel="stylesheet" href="style.css">
-
-        <script src="js/expand_shrink.js"></script>
         <script src="js/collapsible.js"></script>
 
         <meta charset="UTF-8">
 
         <script src="jquery.js"></script> 
-	    <script> 
-	    $(function(){
-	      $("#includedBachelor").load("bachelor.html"); 
-	    });
-	    </script>
-
-	    <script>
-		function includeHTML() {
-		  var z, i, elmnt, file, xhttp;
-		  /* Loop through a collection of all HTML elements: */
-		  z = document.getElementsByTagName("*");
-		  for (i = 0; i < z.length; i++) {
-		    elmnt = z[i];
-		    /*search for elements with a certain atrribute:*/
-		    file = elmnt.getAttribute("w3-include-html");
-		    if (file) {
-		      /* Make an HTTP request using the attribute value as the file name: */
-		      xhttp = new XMLHttpRequest();
-		      xhttp.onreadystatechange = function() {
-		        if (this.readyState == 4) {
-		          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-		          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-		          /* Remove the attribute, and call this function once more: */
-		          elmnt.removeAttribute("w3-include-html");
-		          includeHTML();
-		        }
-		      } 
-		      xhttp.open("GET", file, true);
-		      xhttp.send();
-		      /* Exit the function: */
-		      return;
-		    }
-		  }
-		}
-		</script>
-
 <!--    
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="" />
@@ -144,46 +106,38 @@
         <ul style="margin-top:-0.66em, margin-bottom: 0.33em">
         <li>Nominated by Prof. Timothy D Barfoot</li>
         <li>Assembled a robot using Lego Mindstorms EV3 and programmed in EV3RT and adaptively controlled the robot to stabilize itself and attack the enemy</li>
+        </ul>>
+        
+        <p><strong>Space Systems Design</strong> (Capstone), <em>University of Toronto, Canada</em>
+            &nbsp;<a href="Slides/AER407Report.pdf">📂</a> </p>
+        <ul>
+        <li>Designed a proposed robotic space system capable of performing scientific exploration of Mars surface</li>
+        <li>Specified detailed constraints and requirements of the robotic system in Operation and System report according to Request for Proposal provided</li>
+        <li>Researched existing solutions, performed trade-off analysis to select components for mechanical, electrical and controls subsystems</li>
+        <li>Prepared reports to summarize the final design with several alternatives, and presented to our "customer" (professor and MDA Space Missions Inc.)</li>
         </ul>
 
+        <p><strong>Aircraft Design</strong> (Capstone), <em>University of Toronto, Canada</em>
+            &nbsp;<a href="Slides/AER406FDR.pdf">📂</a> </p>
+        <ul>
+        <li>Designed a radio-controlled model aircraft with blended wing body configuration</li>
+        <li>Optimized the Flight Score by making trade-off among payload, flying time, take-off distance, etc. in order to excel in flying competition</li>
+        <li>Analyzed various types of airfoils designs and selected based on static and dynamic stability studies, failure studies of the material and buckling studies of the structure</li>
+        <li>Built the final design entirely by carbon fiber with molds</li>
+        </ul>
+        
+        <p><strong>Robotic Design Project</strong>, <em>University of Toronto, Canada</em></p>
+        <ul>
+        <li>Ranked 2nd in competition among 22 teams, achieved 9 out of 9 spots fully-function compared with 4 to 5 in average</li>
+        <li>Fabricated a portable and robust testing machine using applicable and proof-of-concept prototype, capable of inspecting, logging and displayed on an LCD the conditions of at maximum 9 commercial LED candlelights mounted upon spots of an attachable tray</li>
+        <li>Engineered cost-efficient and reliable electrical circuits that support the entire robotics system, satisfying all technical demands and limited budget of $280</li>
+        <li>Cooperated with electromechanical and micro-controller specialists to debug and test machine on subsystem integration which contributed to the project life-cycle assessment</li>
+        <li>Utilized MS Project and Gantt Chart for project process management to ensure the project was completed in a timely manner</li>
+        <li>Constructed 2D &amp; 3D modeling drafts of our design</li>
+        <li>Presented and demonstrated overall machine functionality on a bi-weekly basis to the teaching team</li>
+        </ul>
+    
         <p style="font-size: 12pt"> <em> Note that most of the engineering designs (in Collapsible) are group work and some of them are requirements in the curriculum of degree. </em> </p>
-
-        <button class="collapsible">More Engineering Designs</button>
-        <div class="content">
-            <!-- <link rel="import" href="eng_design.html" > -->
-            <!-- <div id = "includedContent"></div> -->
-            <!-- <div data-include="eng_design.html"></div> -->
-
-            <p><strong>Space Systems Design</strong> (Capstone), <em>University of Toronto, Canada</em>
-                &nbsp;<a href="Slides/AER407Report.pdf">📂</a> </p>
-            <ul>
-            <li>Designed a proposed robotic space system capable of performing scientific exploration of Mars surface</li>
-            <li>Specified detailed constraints and requirements of the robotic system in Operation and System report according to Request for Proposal provided</li>
-            <li>Researched existing solutions, performed trade-off analysis to select components for mechanical, electrical and controls subsystems</li>
-            <li>Prepared reports to summarize the final design with several alternatives, and presented to our "customer" (professor and MDA Space Missions Inc.)</li>
-            </ul>
-
-            <p><strong>Aircraft Design</strong> (Capstone), <em>University of Toronto, Canada</em>
-                &nbsp;<a href="Slides/AER406FDR.pdf">📂</a> </p>
-            <ul>
-            <li>Designed a radio-controlled model aircraft with blended wing body configuration</li>
-            <li>Optimized the Flight Score by making trade-off among payload, flying time, take-off distance, etc. in order to excel in flying competition</li>
-            <li>Analyzed various types of airfoils designs and selected based on static and dynamic stability studies, failure studies of the material and buckling studies of the structure</li>
-            <li>Built the final design entirely by carbon fiber with molds</li>
-            </ul>
-            
-            <p><strong>Robotic Design Project</strong>, <em>University of Toronto, Canada</em></p>
-            <ul>
-            <li>Ranked 2nd in competition among 22 teams, achieved 9 out of 9 spots fully-function compared with 4 to 5 in average</li>
-            <li>Fabricated a portable and robust testing machine using applicable and proof-of-concept prototype, capable of inspecting, logging and displayed on an LCD the conditions of at maximum 9 commercial LED candlelights mounted upon spots of an attachable tray</li>
-            <li>Engineered cost-efficient and reliable electrical circuits that support the entire robotics system, satisfying all technical demands and limited budget of $280</li>
-            <li>Cooperated with electromechanical and micro-controller specialists to debug and test machine on subsystem integration which contributed to the project life-cycle assessment</li>
-            <li>Utilized MS Project for project process management to ensure the project was completed in a timely manner</li>
-            <li>Constructed 2D &amp; 3D modeling drafts of our design</li>
-            <li>Presented and demonstrated overall machine functionality on a bi-weekly basis to the teaching team</li>
-            <li>Formulated a 59-page design proposal for a specific Request for Proposal and constructed a 184 pages final report</li>
-            </ul>
-        </div>
 
         <!-- <script>
         var coll = document.getElementsByClassName("collapsible");
